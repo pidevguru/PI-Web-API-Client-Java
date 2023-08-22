@@ -1,0 +1,69 @@
+PI Web API client for Java
+===
+
+## Overview
+This repository has the source code package of the PI Web API client for Java. PI Web API 2018 swagger specification was used to create this package.
+
+## Requirements
+
+ - PI Web API 2018+ instance available on your domain or a public network.
+
+
+## Compability
+
+This library is compatible with:
+
+- JDK
+- Maven
+
+
+## Documentation
+
+All PI Web API server methods are mapped on this client. Please refer to [PI Web API help page](/piwebapi/help). 
+
+### Create an instance of the PI Web API top level object.
+
+```java
+	PIWebApiClient client = new PIWebApiClient("https://webserver/piwebapi", username, password, false, true);  
+``` 
+
+This library is only compatible with PI Web API Basic Authentication. As a result, you must provide the username and password.
+
+
+### Get the PI Data Archive WebId
+
+```java
+	PIDataServer dataServer = client.getDataServer().getByPath("\\\\MARC-PI2016", null, null);
+```
+
+### Create a new PI Point
+
+```java
+	PIDataServer dataServer = client.getDataServer().getByPath("\\\\MARC-PI2016, null, null);
+	PIPoint newPoint = new PIPoint();
+	newPoint.setName("SINUSOID_TEST5");
+	newPoint.setDescriptor("Test PI Point for Java PI Web API Client");
+	newPoint.setPointClass("classic");
+	newPoint.setPointType("float32");
+	newPoint.setFuture(false);
+	ApiResponse<Void> res =  client.getDataServer().createPointWithHttpInfo(dataServer.getWebId(), newPoint, null);          
+```
+
+
+
+## Licensing
+Copyright 2023 PIDevGuru.
+
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+   
+Please see the file named [LICENSE.md](LICENSE.md).
