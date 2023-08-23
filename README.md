@@ -16,10 +16,64 @@ This library is compatible with:
 - JDK
 - Maven
 
-
 ## Documentation
 
 All PI Web API server methods are mapped on this client. Please refer to [PI Web API help page](/piwebapi/help). 
+
+## Installation
+
+Use Maven or Gradle to download automatically the client package.
+
+### Maven
+
+To get a Git project into your build:
+
+1)Add the JitPack repository to your build file
+
+ ```xml
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+	
+ 2)Add the dependency
+ 
+ ```xml
+ 	<dependency>
+	    <groupId>com.github.pidevguru</groupId>
+	    <artifactId>PI-Web-API-Client-Java</artifactId>
+	    <version>main-SNAPSHOT</version>
+	</dependency>
+```
+
+### Gradle
+
+To get a Git project into your build:
+
+1)Add it in your root build.gradle at the end of repositories:
+
+ ```json
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+	
+ 2)Add the dependency
+ 
+ ```json
+	dependencies {
+	        implementation 'com.github.pidevguru:PI-Web-API-Client-Java:main-SNAPSHOT'
+	}
+```
+
+
+## Examples
 
 ### Create an instance of the PI Web API top level object.
 
