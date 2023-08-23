@@ -18,7 +18,7 @@ This library is compatible with:
 
 ## Documentation
 
-All PI Web API server methods are mapped on this client. Please refer to [PI Web API help page](https://docs.aveva.com/bundle/pi-web-api-reference/page/help). 
+All PI Web API server methods are mapped on this client. Please refer to [PI Web API help page](/piwebapi/help). 
 
 ## Installation
 
