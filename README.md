@@ -55,7 +55,7 @@ To get a Git project into your build:
 
 1)Add it in your root build.gradle at the end of repositories:
 
- ```json
+```JSON
 	allprojects {
 		repositories {
 			...
@@ -66,7 +66,7 @@ To get a Git project into your build:
 	
  2)Add the dependency
  
- ```json
+```JSON
 	dependencies {
 	        implementation 'com.github.pidevguru:PI-Web-API-Client-Java:main-SNAPSHOT'
 	}
